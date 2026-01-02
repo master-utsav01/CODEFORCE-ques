@@ -1,0 +1,25 @@
+import java.util.*;
+public class GoodKid {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while( t-->0){
+            int n = sc.nextInt();
+
+            int a[] = new int[n];
+            for(int i=0; i<n; i++){
+                a[i]= sc.nextInt();
+            }
+            Arrays.sort(a);
+           
+            int prod=a[0]+1;
+            for(int i=1; i<n ; i++){
+             
+                prod *= a[i]; 
+              
+            }
+            System.out.println(prod );
+        }
+
+    }
+}
