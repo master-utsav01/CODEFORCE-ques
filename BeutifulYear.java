@@ -3,16 +3,20 @@ public class BeutifulYear {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         int year=sc.nextInt();
-        Set<Integer> res=new HashSet<>();
-        for(int i=year+1;i<9999;i++){
-            String str=Integer.toString(i);
-            char[] ab=str.toCharArray();
-            for(char ch:ab){
-                res.add(i);
+
+        while (true) {
+            year++;
+            String str=String.valueOf(year);
+            if(str.charAt(0)!=str.charAt(1)&&
+                str.charAt(0)!=str.charAt(2)&&
+                str.charAt(0)!=str.charAt(3)&&
+                str.charAt(1)!=str.charAt(2)&&
+                str.charAt(2)!=str.charAt(3)&&
+                str.charAt(1)!=str.charAt(3)
+            ){
+                System.out.println(year);
+                break;
             }
-            if(res.size()==4){
-            System.out.println(i);
-        }
         }
         
     }
