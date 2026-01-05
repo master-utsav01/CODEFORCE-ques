@@ -30,27 +30,25 @@
 
 // http://en.wikipedia.org/wiki/Lexicographical_order
 import java.util.*;
+
 public class PetyaAndString {
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        String s1= sc.nextLine().toLowerCase();
-        String s2= sc.nextLine().toLowerCase();
-        int sum1=0,sum2=0;
-        for(int i=0;i<s1.length();i++){
-            sum1 += (int)s1.charAt(i);
-        }
-         for(int i=0;i<s2.length();i++){
-            sum2 += (int)s2.charAt(i);
-        }
-        if(sum1>sum2){
-            System.out.println(1);
-        }else if(sum1<sum2){
-            System.out.println(-1);
-        }else{
-            System.out.println(0);
-        }
-       
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.nextLine().toLowerCase();
+        String s2 = sc.nextLine().toLowerCase();
 
+        for (int i = 0; i < s1.length(); i++) {
+            if (s1.charAt(i) > s2.charAt(i)) {
+                System.out.println(1);
+                return;
+            } 
+            if (s1.charAt(i) < s2.charAt(i)) {
+                System.out.println(-1);
+                return;
+            }
+        }
 
+        System.out.println(0); // all characters equal
     }
 }
+
