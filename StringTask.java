@@ -37,7 +37,7 @@ public class StringTask {
         StringBuilder sb= new StringBuilder();
         for(int i=0;i<str.length();i++){
             char ch=str.charAt(i);
-            if(ch=='a' || ch=='e' ||ch=='i' ||ch=='o' ||ch=='u'){
+            if(ch=='a' || ch=='e' ||ch=='i' ||ch=='o' ||ch=='u' || ch=='y'){
                 continue;
             }else{
                 sb.append(".").append(ch);
